@@ -18,21 +18,30 @@ const firstForm = forms[0];
 const fname = firstForm.elements["fname"];
 const lname = firstForm.elements["lname"];
 const email = firstForm.elements["email"];
+// console.log(radios);
 
 firstForm.addEventListener("submit", (event) => {
-  const radio = document.querySelector('input[name="fav_car"]:checked'); // checks for checked radio on each submission
+  // const radio = document.querySelector('input[name="fav_car"]:checked'); // checks for checked radio on each submission
+  const radios = document.querySelectorAll('input[name="fav_car"]');
+  let checkedRadio = null;
+  radios.forEach((input) => {
+    // iterates through radios, finds the one that is checked, then assigns checkedRadio to that input
+    if (input.checked) {
+      checkedRadio = input;
+    }
+  });
   const fn = validateFirstName();
   const ln = validateLastName();
   const em = validateEmail();
   if (fn === false || ln === false || em === false) {
     event.preventDefault();
-  } else if (radio === null) {
+  } else if (checkedRadio === null) {
     event.preventDefault();
     alert(`Please pick a radio value!`);
   } else {
     // show user's input from radio
     alert(
-      `Thank you ${fname.value} ${lname.value} for your submission! You chose the ${radio.value}. Nice choice!`
+      `Thank you ${fname.value} ${lname.value} for your submission! You chose the ${checkedRadio.value}. Nice choice!`
     );
   }
 });
