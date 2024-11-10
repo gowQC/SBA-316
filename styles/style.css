@@ -152,3 +152,8 @@ h1 {
   list-style: circle;
   list-style-type: disc;
 }
+
+/*CSS for SBA 316*/
+.highlighted {
+  background-color: yellow;
+}

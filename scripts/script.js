@@ -1,6 +1,12 @@
 // variables for entire page's usage
 const forms = document.querySelectorAll("form"); // gets all forms from html page
 const submitButtons = document.querySelectorAll('input[type="submit"]'); // will keep track of all submit buttons found in the forms
+
+// FIRST FORM variables and event listener
+const firstForm = forms[0];
+const fname = firstForm.elements["fname"];
+const lname = firstForm.elements["lname"];
+const email = firstForm.elements["email"];
 const validEndings = [
   "org",
   "com",
@@ -13,15 +19,7 @@ const validEndings = [
   "au",
 ];
 
-// first form variables and event listener
-const firstForm = forms[0];
-const fname = firstForm.elements["fname"];
-const lname = firstForm.elements["lname"];
-const email = firstForm.elements["email"];
-// console.log(radios);
-
 firstForm.addEventListener("submit", (event) => {
-  // const radio = document.querySelector('input[name="fav_car"]:checked'); // checks for checked radio on each submission
   const radios = document.querySelectorAll('input[name="fav_car"]');
   let checkedRadio = null;
   radios.forEach((input) => {
@@ -37,10 +35,10 @@ firstForm.addEventListener("submit", (event) => {
     event.preventDefault();
   } else if (checkedRadio === null) {
     event.preventDefault();
-    alert(`Please pick a radio value!`);
+    window.alert(`Please pick a radio value!`);
   } else {
     // show user's input from radio
-    alert(
+    window.alert(
       `Thank you ${fname.value} ${lname.value} for your submission! You chose the ${checkedRadio.value}. Nice choice!`
     );
   }
@@ -49,7 +47,7 @@ firstForm.addEventListener("submit", (event) => {
 function validateFirstName() {
   let first = fname.value;
   if (first.length < 3) {
-    alert("Please enter a valid first name of at least 3 characters!");
+    window.alert("Please enter a valid first name of at least 3 characters!");
     fname.focus();
     return false;
   }
@@ -59,7 +57,7 @@ function validateFirstName() {
 function validateLastName() {
   let last = lname.value;
   if (last.length < 3) {
-    alert("Please enter a valid last name of at least 3 characters!");
+    window.alert("Please enter a valid last name of at least 3 characters!");
     lname.focus();
     return false;
   }
@@ -97,14 +95,14 @@ function validateEmail() {
 
   if (verify_email.length < 1) {
     // if email is empty
-    alert("Please enter an email address!");
+    window.alert("Please enter an email address!");
     email.focus();
     return false;
   }
 
   if (atpos < 1 || numberOfAt > 1) {
     // checking that @ is not first character and only one @ exists
-    alert(
+    window.alert(
       "Invalid Email! Must include only 1 @ symbol, which also must not be at the beginning."
     );
     email.focus();
@@ -115,7 +113,7 @@ function validateEmail() {
     // checking that after @, there is some domain name
     console.log(dotpos);
     console.log(atpos);
-    alert(
+    window.alert(
       "Invalid structure: @. \n You must include a domain name after the @ symbol."
     );
     email.focus();
@@ -124,7 +122,7 @@ function validateEmail() {
 
   if (validEnding === false) {
     // checking for truth value
-    alert(
+    window.alert(
       "Invalid top-level domain for email: \n The ending of your email is invalid!"
     );
     email.focus();
@@ -134,6 +132,37 @@ function validateEmail() {
   return true;
 }
 
-// console.log(fname);
-// console.log(forms[0]);
-// console.log(submitButtons);
+// SECOND FORM variables and event listener
+const secondForm = forms[1];
+const table = document.getElementById("table");
+const tbody = document.querySelector("table").firstElementChild; //.firstElementChild.nextElementSibling; // gets the first row (excluding header row) of table
+
+secondForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const select = document.getElementById("cars");
+  const selected = select.value;
+
+  const confirm = window.confirm("Is this your final choice?");
+  if (confirm) {
+    window.alert("Check the table above!");
+  } else {
+    window.alert("Choose something else if you'd like!");
+    return;
+  }
+
+  for (let i = 1; i < tbody.children.length; i++) {
+    // removes highlighted rows if they already exist
+    tbody.children[i].classList.remove("highlighted");
+  }
+  for (let i = 1; i < tbody.children.length; i++) {
+    // iterate through entire table body (exluding headers row) to find rows that contain selected value
+    if (tbody.children[i].firstElementChild.innerHTML.includes(selected)) {
+      // if the tbody's first element child contains the text of the selected value, highlight the row and add to the innerHTML
+      tbody.children[i].classList.add("highlighted");
+      tbody.children[i].firstElementChild.innerHTML += " ***";
+    }
+  }
+  console.log(tbody.childNodes[0]);
+  console.log(tbody.children.length);
+  console.log(tbody.children[1]);
+});
