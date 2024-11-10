@@ -6,8 +6,8 @@ SBA-316. The added script.js file adds functionality to the forms found on the m
 # First Form Functionality
 
 The first form will require that certain criteria are met with the user's inputs before successfully submitting the information provided by the user.
-The first and last names must be greater than or equal to 3 letters in length, the email will require the completion of a rigorous criteria before submission, and one
-radio value must be submitted along with everything else.
+The first and last names must be greater than or equal to 3 letters in length and can only contain letters, the email will require the completion of
+a rigorous criteria before submission, and one radio value must be submitted along with everything else.
 
 The email criteria includes:
 
