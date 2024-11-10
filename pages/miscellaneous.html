@@ -1,146 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nick's Favorite Cars (SBA-307)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
     <style>
-        table, table * {
-            border: 1px solid black;
-            text-align: center;
-        }
-        table {
-            width: 50%;
-            margin: auto;
-        }
-        th {
-            background-color: wheat;
-        }
-        input {
-            margin: 5px 10px;
-        }
-        form {
-            text-align: center; 
-            margin-bottom: 20px;
-        }
+      table,
+      table * {
+        border: 1px solid black;
+        text-align: center;
+      }
+      table {
+        width: 50%;
+        margin: auto;
+      }
+      th {
+        background-color: wheat;
+      }
+      input {
+        margin: 5px 10px;
+      }
+      form {
+        text-align: center;
+        margin-bottom: 20px;
+      }
     </style>
-</head>
+    <script defer src="../scripts/script.js"></script>
+  </head>
 
-<body>
-    <header id="title" class="roboto-black-italic">Nick's Miscellaneous Car Stats</header>
+  <body>
+    <header id="title" class="roboto-black-italic">
+      Nick's Miscellaneous Car Stats
+    </header>
     <nav class="navbar">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./hyundai.html">Hyundai</a></li>
-            <li><a href="./genesis.html">Genesis</a></li>
-            <li><a href="./bmw.html">BMW</a></li>
-        </ul>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./hyundai.html">Hyundai</a></li>
+        <li><a href="./genesis.html">Genesis</a></li>
+        <li><a href="./bmw.html">BMW</a></li>
+      </ul>
     </nav>
     <h1 class="roboto-black-italic">My Car Rankings</h1>
     <table>
-        <tr>
-            <th>Car</th>
-            <th>Estimate MSRP</th>
-            <th>Ranking</th>
-        </tr>
-        <tr>
-            <td>2024 BMW i7</td>
-            <td>$105k - $170k</td>
-            <td>1st</td>
-        </tr>
-        <tr>
-            <td>2024 Hyundai Sonata N-Line</td>
-            <td>$34,950</td>
-            <td>2nd</td>
-        </tr>
-        <tr>
-            <td>2024 BMW Z4 30i Roadster</td>
-            <td>$54k - $72.9k</td>
-            <td>3rd</td>
-        </tr>
-        <tr>
-            <td>Hyundai IONIQ 6</td>
-            <td>$37k - $52k</td>
-            <td>4th</td>
-        </tr>
-        <tr>
-            <td>2024 Genesis G90</td>
-            <td>$89k - $99.5k</td>
-            <td>5th</td>
-        </tr>
-        <tr>
-            <td>2024 Genesis G80</td>
-            <td>$54.4k - $64.3k</td>
-            <td>6th</td>
-        </tr>
-        <tr>
-            <td>2024 BMW 8 Series</td>
-            <td>$90.8k - $153k</td>
-            <td>7th</td>
-        </tr>
-        <tr>
-            <td>2024 Hyundai Tucson</td>
-            <td>$28k - $45.6k</td>
-            <td>8th</td>
-        </tr>
-        <tr>
-            <td>2024+ Genesis Magma Concept Cars</td>
-            <td>N/A</td>
-            <td>9th</td>
-        </tr>
+      <tr>
+        <th>Car</th>
+        <th>Estimate MSRP</th>
+        <th>Ranking</th>
+      </tr>
+      <tr>
+        <td>2024 BMW i7</td>
+        <td>$105k - $170k</td>
+        <td>1st</td>
+      </tr>
+      <tr>
+        <td>2024 Hyundai Sonata N-Line</td>
+        <td>$34,950</td>
+        <td>2nd</td>
+      </tr>
+      <tr>
+        <td>2024 BMW Z4 30i Roadster</td>
+        <td>$54k - $72.9k</td>
+        <td>3rd</td>
+      </tr>
+      <tr>
+        <td>Hyundai IONIQ 6</td>
+        <td>$37k - $52k</td>
+        <td>4th</td>
+      </tr>
+      <tr>
+        <td>2024 Genesis G90</td>
+        <td>$89k - $99.5k</td>
+        <td>5th</td>
+      </tr>
+      <tr>
+        <td>2024 Genesis G80</td>
+        <td>$54.4k - $64.3k</td>
+        <td>6th</td>
+      </tr>
+      <tr>
+        <td>2024 BMW 8 Series</td>
+        <td>$90.8k - $153k</td>
+        <td>7th</td>
+      </tr>
+      <tr>
+        <td>2024 Hyundai Tucson</td>
+        <td>$28k - $45.6k</td>
+        <td>8th</td>
+      </tr>
+      <tr>
+        <td>2024+ Genesis Magma Concept Cars</td>
+        <td>N/A</td>
+        <td>9th</td>
+      </tr>
     </table>
-    <h2 style="text-align: center; margin-top: 30px;">And the Winner Is...</h2>
-    <iframe src="https://giphy.com/embed/lOS14BRWT3s0BBv4Iw" width="480" height="480" style="margin: auto; border: 1px solid black;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p style="text-align: center;"><a href="https://giphy.com/gifs/ALPINAAUTOMOBILES-alpina-bmw-automobiles-lOS14BRWT3s0BBv4Iw">via GIPHY</a></p>
-    
+    <h2 style="text-align: center; margin-top: 30px">And the Winner Is...</h2>
+    <iframe
+      src="https://giphy.com/embed/lOS14BRWT3s0BBv4Iw"
+      width="480"
+      height="480"
+      style="margin: auto; border: 1px solid black"
+      frameborder="0"
+      class="giphy-embed"
+      allowfullscreen
+    ></iframe>
+    <p style="text-align: center">
+      <a
+        href="https://giphy.com/gifs/ALPINAAUTOMOBILES-alpina-bmw-automobiles-lOS14BRWT3s0BBv4Iw"
+        >via GIPHY</a
+      >
+    </p>
+
     <h1>Feel Free to Leave Your Feedback!</h1>
-    <h2 style="text-align: center; margin-bottom: 20px;">Which of these cars was your favorite?</h2>
+    <h2 style="text-align: center; margin-bottom: 20px">
+      Which of these cars was your favorite?
+    </h2>
     <form>
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname">
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname">
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email">
-        <br> 
-        <input type="radio" id="i7" name="fav_car" value="2024 BMW i7">
-        <label for="i7">2024 BMW i7</label>
-        <input type="radio" id="n-line" name="fav_car" value="2024 Hyundai Sonata N-Line">
-        <label for="n-line">2024 Hyundai Sonata N-Line</label>
-        <input type="radio" id="z4" name="fav_car" value="2024 BMW Z4 30i Roadster">
-        <label for="z4">2024 BMW Z4 30i Roadster</label><pre> </pre>
-        <input type="radio" id="ioniq" name="fav_car" value="Hyundai IONIQ 6">
-        <label for="ioniq">Hyundai IONIQ 6</label>
-        <input type="radio" id="g90" name="fav_car" value="2024 Genesis G90">
-        <label for="g90">2024 Genesis G90</label>
-        <input type="radio" id="g80" name="fav_car" value="2024 Genesis G80">
-        <label for="g80">2024 Genesis G80</label><pre> </pre>
-        <input type="radio" id="8-series" name="fav_car" value="2024 BMW 8 Series">
-        <label for="8-series">2024 BMW 8 Series</label>
-        <input type="radio" id="tucson" name="fav_car" value="2024 Hyundai Tucson">
-        <label for="tucson">2024 Hyundai Tucson</label>
-        <input type="radio" id="magma" name="fav_car" value="2024+ Genesis Magma Concept Cars">
-        <label for="magma">2024+ Genesis Magma Concept Cars</label><pre> </pre>
-        <input type="submit" value="Submit">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" />
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" />
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <input type="radio" id="i7" name="fav_car" value="2024 BMW i7" />
+      <label for="i7">2024 BMW i7</label>
+      <input
+        type="radio"
+        id="n-line"
+        name="fav_car"
+        value="2024 Hyundai Sonata N-Line"
+      />
+      <label for="n-line">2024 Hyundai Sonata N-Line</label>
+      <input
+        type="radio"
+        id="z4"
+        name="fav_car"
+        value="2024 BMW Z4 30i Roadster"
+      />
+      <label for="z4">2024 BMW Z4 30i Roadster</label>
+      <pre></pre>
+      <input type="radio" id="ioniq" name="fav_car" value="Hyundai IONIQ 6" />
+      <label for="ioniq">Hyundai IONIQ 6</label>
+      <input type="radio" id="g90" name="fav_car" value="2024 Genesis G90" />
+      <label for="g90">2024 Genesis G90</label>
+      <input type="radio" id="g80" name="fav_car" value="2024 Genesis G80" />
+      <label for="g80">2024 Genesis G80</label>
+      <pre></pre>
+      <input
+        type="radio"
+        id="8-series"
+        name="fav_car"
+        value="2024 BMW 8 Series"
+      />
+      <label for="8-series">2024 BMW 8 Series</label>
+      <input
+        type="radio"
+        id="tucson"
+        name="fav_car"
+        value="2024 Hyundai Tucson"
+      />
+      <label for="tucson">2024 Hyundai Tucson</label>
+      <input
+        type="radio"
+        id="magma"
+        name="fav_car"
+        value="2024+ Genesis Magma Concept Cars"
+      />
+      <label for="magma">2024+ Genesis Magma Concept Cars</label>
+      <pre></pre>
+      <input type="submit" value="Submit" />
     </form>
-    <h2 style="text-align: center; margin-bottom: 20px;">Which manufacturer of the three makes the best cars?... Yes I know Genesis is just luxury Hyundai, but forget about that!</h2>
+    <h2 style="text-align: center; margin-bottom: 20px">
+      Which manufacturer of the three makes the best cars?... Yes I know Genesis
+      is just luxury Hyundai, but forget about that!
+    </h2>
     <form>
-        <label for="cars">Choose a manufacturer:</label>
-        <select name="cars" id="cars">
+      <label for="cars">Choose a manufacturer:</label>
+      <select name="cars" id="cars">
         <option value="Hyundai">Hyundai</option>
         <option value="Genesis">Genesis</option>
         <option value="BMW">BMW</option>
-        </select>
-        <input type="submit" value="Submit">
+      </select>
+      <input type="submit" value="Submit" />
     </form>
-    <h2 style="text-align: center; margin-bottom: 20px;">Want to add some car suggestions? Leave them here!</h2>
-    <form style="margin-bottom: 60px;">
-        <textarea rows="10" cols="100"></textarea><br>
-        <input type="submit" value="Submit">
+    <h2 style="text-align: center; margin-bottom: 20px">
+      Want to add some car suggestions? Leave them here!
+    </h2>
+    <form style="margin-bottom: 60px">
+      <textarea rows="10" cols="100"></textarea><br />
+      <input type="submit" value="Submit" />
     </form>
-</body>
-
+  </body>
 </html>
