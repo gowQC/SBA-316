@@ -134,8 +134,7 @@ function validateEmail() {
 
 // SECOND FORM variables and event listener
 const secondForm = forms[1];
-const table = document.getElementById("table");
-const tbody = document.querySelector("table").firstElementChild; //.firstElementChild.nextElementSibling; // gets the first row (excluding header row) of table
+const tbody = document.getElementById("my-table").firstElementChild; // gets the td element
 
 secondForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -153,16 +152,52 @@ secondForm.addEventListener("submit", (event) => {
   for (let i = 1; i < tbody.children.length; i++) {
     // removes highlighted rows if they already exist
     tbody.children[i].classList.remove("highlighted");
+    // remove asterisks
+    let temp = tbody.children[i].firstElementChild.innerHTML.replace(/\*/g, "");
+    tbody.children[i].firstElementChild.innerHTML = temp;
   }
   for (let i = 1; i < tbody.children.length; i++) {
     // iterate through entire table body (exluding headers row) to find rows that contain selected value
     if (tbody.children[i].firstElementChild.innerHTML.includes(selected)) {
       // if the tbody's first element child contains the text of the selected value, highlight the row and add to the innerHTML
       tbody.children[i].classList.add("highlighted");
-      tbody.children[i].firstElementChild.innerHTML += " ***";
+      tbody.children[i].firstElementChild.innerHTML += "***";
     }
   }
-  console.log(tbody.childNodes[0]);
-  console.log(tbody.children.length);
-  console.log(tbody.children[1]);
+});
+
+// THIRD FORM variables and event listener (will use table from form 2's code above)
+const thirdForm = forms[2];
+
+thirdForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  // user data
+  const user_car = document.getElementById("user_car");
+  const user_msrp = document.getElementById("user_msrp");
+  const user_rank = document.getElementById("user_rank");
+  // make and append new element with user data as td
+  const new_tr = document.createElement("tr");
+  const first_td = document.createElement("td");
+  const second_td = document.createElement("td");
+  const third_td = document.createElement("td");
+  first_td.innerHTML = user_car.value;
+  second_td.innerHTML = user_msrp.value;
+  third_td.innerHTML = user_rank.value;
+  new_tr.appendChild(first_td);
+  new_tr.appendChild(second_td);
+  new_tr.appendChild(third_td);
+  // apply class and new onclick attribute
+  new_tr.classList.add("users-choice");
+  new_tr.onclick = () => {
+    let confirm = window.confirm("Remove this selection from the table?");
+    if (confirm) {
+      tbody.removeChild(tbody.lastElementChild);
+      window.alert("Selection removed!");
+    } else {
+      window.alert("Keeping selection in table!");
+    }
+  };
+  tbody.appendChild(new_tr);
+
+  alert("ok");
 });

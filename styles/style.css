@@ -157,3 +157,11 @@ h1 {
 .highlighted {
   background-color: yellow;
 }
+
+.users-choice {
+  background-color: orange;
+}
+
+.users-choice:hover {
+  cursor: pointer;
+}

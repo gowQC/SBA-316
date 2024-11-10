@@ -21,3 +21,9 @@ The email criteria includes:
 The second form will allow a user to select 1 of 3 options for their favorite manufacturer out of the given car brands. When a choice is selected, that value
 will then be used to check for all cars in the table that belong to that manufacturer. The rows containing the respective cars will be highlighted by applying
 a CSS class to the entire row, along with some asterisks to be added next to the original text of the car name.
+
+# Third Form Functionality
+
+The third form will allow users to add their own choices to the table already provided. If the user provides valid data for all 3 inputs, then the program will
+append a new tr to the table with the provided user info. The new tr will also be clickable; when clicked, it will prompt the user with the option of removing the
+newly created row.
