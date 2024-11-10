@@ -25,5 +25,5 @@ a CSS class to the entire row, along with some asterisks to be added next to the
 # Third Form Functionality
 
 The third form will allow users to add their own choices to the table already provided. If the user provides valid data for all 3 inputs, then the program will
-append a new tr to the table with the provided user info. The new tr will also be clickable; when clicked, it will prompt the user with the option of removing the
+append a new tr to the table body with the provided user info. The new tr will also be clickable; when clicked, it will prompt the user with the option of removing the
 newly created row.
