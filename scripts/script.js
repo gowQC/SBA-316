@@ -76,7 +76,15 @@ function validateEmail() {
   for (let i = dotpos + 1; i < verify_email.length; i++) {
     ending += verify_email[i];
   }
-  let validEnding = false;
+  let validEnding = false; // defaults to false
+  for (let email_ending in validEndings) {
+    // if the email's ending is not found in array of valid URL ending's, send alert + return false
+    if (ending === validEndings[email_ending]) {
+      // if one match is found, then set value to true then break out of for loop
+      validEnding = true;
+      break;
+    }
+  }
 
   if (verify_email.length < 1) {
     // if email is empty
@@ -105,14 +113,6 @@ function validateEmail() {
     return false;
   }
 
-  for (let email_ending in validEndings) {
-    // if the email's ending is not found in array of valid URL ending's, send alert + return false
-    if (ending === validEndings[email_ending]) {
-      // if one match is found, then set value to true then break out of for loop
-      validEnding = true;
-      break;
-    }
-  }
   if (validEnding === false) {
     // checking for truth value
     alert(
